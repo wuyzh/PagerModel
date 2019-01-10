@@ -6,9 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.wuyazhou.learn.pagermodel.R;
+import com.wuyazhou.learn.pagermodel.showlogview.ShowLogUtil;
 
 /**
  * @author 吴亚洲
@@ -51,7 +51,7 @@ public class ModelPagerView extends FrameLayout implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.model_button:
-                Toast.makeText(mContext,"点击按钮",Toast.LENGTH_LONG).show();
+                ShowLogUtil.addLog("123");
                 break;
             default:
                 break;
