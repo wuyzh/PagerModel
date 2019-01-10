@@ -1,4 +1,4 @@
-package com.wuyazhou.learn.pagermodel.ViewPager;
+package com.wuyazhou.learn.pagermodel.viewpager;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

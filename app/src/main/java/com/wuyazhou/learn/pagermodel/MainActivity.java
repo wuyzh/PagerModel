@@ -5,8 +5,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.wuyazhou.learn.pagermodel.ViewPager.ModelPagerView;
-import com.wuyazhou.learn.pagermodel.ViewPager.ViewPagerAdapter;
+import com.wuyazhou.learn.pagermodel.viewpager.ModelPagerView;
+import com.wuyazhou.learn.pagermodel.viewpager.ViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
