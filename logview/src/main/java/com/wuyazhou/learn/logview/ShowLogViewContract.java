@@ -1,4 +1,4 @@
-package com.wuyazhou.learn.pagermodel.showlogview;
+package com.wuyazhou.learn.logview;
 /**
  * @author wuyzh
  * @fuction 显示log的回调
@@ -9,5 +9,5 @@ public interface ShowLogViewContract {
      * @param key
      * @param value
      * */
-    void showLog(String key,String value);
+    void showLog(String key, String value);
 }

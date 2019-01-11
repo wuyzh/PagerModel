@@ -1,5 +1,5 @@
 
-package com.wuyazhou.learn.pagermodel.utils;
+package com.wuyazhou.learn.utils;
 
 import android.content.res.Resources;
 
