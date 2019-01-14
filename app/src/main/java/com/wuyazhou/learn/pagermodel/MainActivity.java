@@ -5,7 +5,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.wuyazhou.learn.logview.ShowLogView;
+import com.wuyazhou.learn.logview.LogShowView;
 import com.wuyazhou.learn.pagermodel.viewpager.ModelPagerView;
 import com.wuyazhou.learn.pagermodel.viewpager.ViewPagerAdapter;
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private List<String> mViewTitle = new ArrayList<String>();
     private ViewPagerAdapter mViewPagerAdapter = null;
 
-    private ShowLogView mShowLogView = null;
+    private LogShowView mShowLogView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

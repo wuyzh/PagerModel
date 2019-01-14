@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-import com.wuyazhou.learn.logview.ShowLogUtil;
+import com.wuyazhou.learn.logview.LogShowUtil;
 import com.wuyazhou.learn.pagermodel.R;
 
 /**
@@ -53,10 +53,10 @@ public class ModelPagerView extends FrameLayout implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.model_button_1:
-                ShowLogUtil.addLog("wuyazhouHttp","123");
+                LogShowUtil.addLog("wuyazhouHttp","123");
                 break;
             case R.id.model_button_2:
-                ShowLogUtil.addLog("wuyazhouTest","456");
+                LogShowUtil.addLog("wuyazhouTest","456");
                 break;
             default:
                 break;
