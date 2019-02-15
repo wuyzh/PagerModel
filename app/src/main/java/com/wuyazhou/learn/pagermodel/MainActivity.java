@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.wuyazhou.learn.logview.LogShowView;
-import com.wuyazhou.learn.pagermodel.viewpager.ModelPagerView;
-import com.wuyazhou.learn.pagermodel.viewpager.ViewPagerAdapter;
+import com.wuyazhou.pagerview.ModelPagerView;
+import com.wuyazhou.pagerview.ViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

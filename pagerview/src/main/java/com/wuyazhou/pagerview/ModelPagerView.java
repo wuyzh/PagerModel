@@ -1,4 +1,4 @@
-package com.wuyazhou.learn.pagermodel.viewpager;
+package com.wuyazhou.pagerview;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,7 +8,6 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.wuyazhou.learn.logview.LogShowUtil;
-import com.wuyazhou.learn.pagermodel.R;
 
 /**
  * @author 吴亚洲
@@ -51,15 +50,12 @@ public class ModelPagerView extends FrameLayout implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.model_button_1:
-                LogShowUtil.addLog("wuyazhouHttp","123");
-                break;
-            case R.id.model_button_2:
-                LogShowUtil.addLog("wuyazhouTest","456");
-                break;
-            default:
-                break;
+        int i = v.getId();
+        if (i == R.id.model_button_1) {
+            LogShowUtil.addLog("wuyazhouHttp", "123");
+        } else if (i == R.id.model_button_2) {
+            LogShowUtil.addLog("wuyazhouTest", "456");
+        } else {
         }
     }
 }
