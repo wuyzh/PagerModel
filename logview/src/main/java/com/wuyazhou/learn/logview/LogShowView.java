@@ -32,7 +32,6 @@ public class LogShowView extends RelativeLayout implements LogShowViewContract {
     private List<LogModel> mList = new ArrayList<>();
 
     private Handler mHandler = null;
-    private LogModel mLogModel = null;
     public LogShowView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
@@ -76,8 +75,8 @@ public class LogShowView extends RelativeLayout implements LogShowViewContract {
 
     @Override
     public void showLog(String key,String value) {
-        mLogModel = new LogModel(key,value);
-        mHandler.post(mRunnableUi);
+        LogModel logModel = new LogModel(key,value);
+        mHandler.post(new RunnableUi(logModel));
     }
 
     @Override
@@ -114,13 +113,19 @@ public class LogShowView extends RelativeLayout implements LogShowViewContract {
         }
     }
 
-    Runnable mRunnableUi =new  Runnable(){
+
+    //这里最好借鉴Message重复利用
+    class RunnableUi implements Runnable{
+        private LogModel logModel;
+        public RunnableUi(LogModel logModel){
+            this.logModel = logModel;
+        }
+
         @Override
         public void run() {
             //更新界面
-            mLogListViewAdapter.addNewLog(mLogModel);
+            mLogListViewAdapter.addNewLog(logModel);
         }
-
-    };
+    }
 
 }
