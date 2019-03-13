@@ -1,5 +1,7 @@
 package com.wuyazhou.learn.logview;
 
+import android.util.Log;
+
 import java.util.concurrent.PriorityBlockingQueue;
 
 /**
@@ -13,6 +15,13 @@ public class LogShowUtil {
 
     public static void addLog(String key,String value){
         mPriorityBlockingQueue.add(new LogShowView.LogModel(key+INTERVAL,value));
+    }
+
+    public static void addLog(String key,String value,boolean showAndroidLog){
+        mPriorityBlockingQueue.add(new LogShowView.LogModel(key+INTERVAL,value));
+        if (showAndroidLog){
+            Log.d(key,value);
+        }
     }
 
     public static PriorityBlockingQueue getLogQueue(){
