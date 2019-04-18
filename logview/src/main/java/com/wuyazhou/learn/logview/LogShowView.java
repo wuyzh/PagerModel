@@ -89,7 +89,7 @@ public class LogShowView extends RelativeLayout implements LogShowViewContract {
 
         }else {
             if (mShowLogThread.isAlive()){
-                mShowLogThread.quit();
+                mShowLogThread.pause();
             }
         }
     }

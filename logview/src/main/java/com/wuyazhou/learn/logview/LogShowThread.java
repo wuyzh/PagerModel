@@ -22,6 +22,11 @@ public class LogShowThread extends Thread{
         mQuit = false;
     }
 
+    public void pause() {
+        mQuit = true;
+        interrupted();
+    }
+
     public void quit() {
         mShowLogViewContract = null;
         mQuit = true;
@@ -30,7 +35,7 @@ public class LogShowThread extends Thread{
 
     @Override
     public void run() {
-        while (true){
+        while (!isInterrupted()){
             try {
                 if (mShowLogViewContract == null){
                     return;
