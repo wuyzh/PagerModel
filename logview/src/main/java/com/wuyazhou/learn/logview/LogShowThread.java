@@ -25,7 +25,7 @@ public class LogShowThread extends Thread{
     public void quit() {
         mShowLogViewContract = null;
         mQuit = true;
-        interrupt();
+        interrupted();
     }
 
     @Override
